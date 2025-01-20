@@ -35,6 +35,21 @@ android {
         minSdkVersion 17
         targetSdkVersion 34
     }
+
+    // Add compileOptions to set Java compatibility to Java 8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8 // Java 8
+        targetCompatibility JavaVersion.VERSION_1_8 // Java 8
+    } 
+    // Add kotlinOptions to set Kotlin JVM target to Java 8
+    kotlinOptions {
+        jvmTarget = '1.8' // Set Kotlin JVM target to Java 8
+    }
+
+    // Add Kotlin JVM toolchain for Java 8
+    kotlin {
+        jvmToolchain(8)
+    }
 }
 
 dependencies {
